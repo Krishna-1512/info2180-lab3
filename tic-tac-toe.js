@@ -3,6 +3,11 @@ var starter=function(){
     //var board=document.querySelectorAll("#board div");
     console.log(board);
     this.boxes(board);
+    document.getElementsByClassName("btn")[0].onclick=function(){
+        for ( let i=0; i<board.length;i++){
+            board[i].innerHTML= "";
+        }
+    }
 }
 
 window.onload=starter;
