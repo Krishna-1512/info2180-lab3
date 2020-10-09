@@ -22,13 +22,54 @@ function boxes(b){
             if (current === true){
                 b[i].innerHTML ='X'
                 current= false;
+                winner (b);
                 
             }
             else{
                 b[i].innerHTML ='O';
                 current= true;
+                winner(b);
                 
             }
         }
-    )}    
+    )};
 }
+
+    
+    function winner (b){
+        if (b[0].innerHTML===b[1].innerHTML&& b[1].innerHTML===[2].innerHTML&& b[1]!==""){
+            document.getElementById("status").className="you-won";
+            document.getElementById("status").innerHTML="Congratulations ! " + b[0].innerHTML +  " is the winner"
+        }
+        else if (b[0].innerHTML===b[3].innerHTML&&b[3].innerHTML===b[6].innerHTML && b[3].innerHTML!==""){
+            document.getElementById("status").className="you-won";
+            document.getElementById("status").innerHTML="Congratulations ! " + b[0].innerHTML +  " is the winner"
+        }
+        else if (b[0].innerHTML===b[0].innerHTML&&b[0].innerHTML===b[4].innerHTML && b[8].innerHTML!==""){
+            document.getElementById("status").className="you-won";
+            document.getElementById("status").innerHTML="Congratulations ! " + b[0].innerHTML +  " is the winner"
+        }
+        else if (b[2].innerHTML===b[5].innerHTML&&b[5].innerHTML===b[8].innerHTML && b[2].innerHTML!==""){
+            document.getElementById("status").className="you-won";
+            document.getElementById("status").innerHTML="Congratulations ! " + b[2].innerHTML +  " is the winner"
+        }
+        else if (b[2].innerHTML===b[4].innerHTML&&b[4].innerHTML===b[6].innerHTML && b[2].innerHTML!==""){
+            document.getElementById("status").className="you-won";
+            document.getElementById("status").innerHTML="Congratulations ! " + b[2].innerHTML +  " is the winner"
+        }
+        else if (b[3].innerHTML===b[4].innerHTML&&b[4].innerHTML===b[5].innerHTML && b[3].innerHTML!==""){
+            document.getElementById("status").className="you-won";
+            document.getElementById("status").innerHTML="Congratulations ! " + b[3].innerHTML +  " is the winner"
+        }
+        else if (b[6].innerHTML===b[7].innerHTML&&b[7].innerHTML===b[8].innerHTML && b[6].innerHTML!==""){
+            document.getElementById("status").className="you-won";
+            document.getElementById("status").innerHTML="Congratulations ! " + b[0] +  " is the winner"
+        }
+        else if (b[1].innerHTML===b[3].innerHTML&&b[3].innerHTML===b[6].innerHTML && b[3].innerHTML!==""){
+            document.getElementById("status").className="you-won";
+            document.getElementById("status").innerHTML="Congratulations ! " + b[0] +  " is the winner"
+        }
+
+    }
+
+
