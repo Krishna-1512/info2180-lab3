@@ -1,3 +1,4 @@
+var originalstat=("Move your mouse over a star and click to play an X or an O");
 var starter=function(){
     let board=document.getElementById("board").children;
     //var board=document.querySelectorAll("#board div");
@@ -6,12 +7,15 @@ var starter=function(){
     document.getElementsByClassName("btn")[0].onclick=function(){
         for ( let i=0; i<board.length;i++){
             board[i].innerHTML= "";
+            let stat = document.getElementById("status");
+            stat.innerHTML = originalstat;
         }
     }
 }
 
 window.onload=starter;
-function boxes(b){ 
+function boxes(b){
+
     var current=true;
     for (let i=0;i<b.length;i++){
         b[i].classList.add('square');
