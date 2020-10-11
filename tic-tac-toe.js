@@ -11,7 +11,7 @@ var starter=function(){
 }
 
 window.onload=starter;
-function boxes(b){
+function boxes(b){ 
     var current=true;
     for (let i=0;i<b.length;i++){
         b[i].classList.add('square');
@@ -24,21 +24,22 @@ function boxes(b){
         
         }
         b[i].addEventListener("click",function(){
-            if (current === true){
-                b[i].innerHTML ='X'
-                current= false;
-                winner (b);
+            if (b[i].innerHTML=== ""){
+                    if (current === true){
+                    b[i].innerHTML ='X'
+                    current= false;
+                    winner (b);
                 
-            }
-            else{
-                b[i].innerHTML ='O';
-                current= true;
-                winner(b);
-                
+                }
+                else{
+                    b[i].innerHTML ='O';
+                    current= true;
+                    winner(b);
+                }
             }
         }
     )};
-}
+
 
     
     function winner (b){
@@ -76,5 +77,5 @@ function boxes(b){
         }
 
     }
-
+}
 
